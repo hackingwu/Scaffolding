@@ -50,7 +50,7 @@ public class CodeGenerator {
     }
 
     public void generate(String type,String entityPackage,String entityName){
-        generate(type,entityName,entityPackage,null);
+        generate(type,entityPackage,entityName,null);
     }
 
 

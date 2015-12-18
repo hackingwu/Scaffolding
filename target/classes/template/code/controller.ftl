@@ -9,7 +9,7 @@ import java.util.Map;
 <#assign objectName = className?uncap_first />
 
 @RestController
-@RequestMapping("/${objectName}")
+@RequestMapping("/{objectName}")
 public class ${className}Controller{
 
     @Autowired
@@ -26,7 +26,7 @@ public class ${className}Controller{
     /**
     * delete
     */
-    @RequestMapping(value="/{id}",method=RequestMethod.DELETE)
+    @RequestMapping(value="/{r"{id}"}",method=RequestMethod.DELETE)
     public void delete(@PathVariable String id){
         ${objectName}Service.delete(id);
     }
@@ -34,7 +34,7 @@ public class ${className}Controller{
     /**
     * update
     */
-    @RequestMapping(value="/{id}",method=RequestMethod.PUT)
+    @RequestMapping(value="/{r"{id}"}",method=RequestMethod.PUT)
     public ${className} update(@PathVariable String id,@RequestBody ${className} ${objectName}){
         //${className} old${className} = ${objectName}Service.findById(id);
         ${objectName}.setId(id);
@@ -54,7 +54,7 @@ public class ${className}Controller{
     /**
     * query one
     */
-    @RequestMapping(value="/{id}",method=RequestMethod.GET)
+    @RequestMapping(value="/{r"{id}"}",method=RequestMethod.GET)
     public ${className} get(@PathVariable String id){
         return ${objectName}Service.findById(id);
     }
